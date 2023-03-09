@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".map.MapActivity">
+
+
+    <fragment android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        android:name="com.naver.maps.map.MapFragment"
+        tools:layout="@layout/activity_map" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_unofficial_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_baseline_new_releases_24"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@id/fab_main"
+        app:layout_constraintEnd_toEndOf="@id/fab_main"
+        app:layout_constraintStart_toStartOf="@id/fab_main"
+        app:layout_constraintTop_toTopOf="@+id/fab_main" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_bikeCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_baseline_sports_score_24"
+        app:fabSize="mini"
+        android:backgroundTint="@color/white"
+        app:borderWidth="0dp"
+        app:layout_constraintTop_toTopOf="@id/fab_main"
+        app:layout_constraintBottom_toBottomOf="@id/fab_main"
+        app:layout_constraintStart_toStartOf="@id/fab_main"
+        app:layout_constraintEnd_toEndOf="@id/fab_main"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_bikeRoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_bike_road"
+        app:fabSize="mini"
+        android:backgroundTint="@color/white"
+        app:borderWidth="0dp"
+        app:layout_constraintTop_toTopOf="@id/fab_main"
+        app:layout_constraintBottom_toBottomOf="@id/fab_main"
+        app:layout_constraintStart_toStartOf="@id/fab_main"
+        app:layout_constraintEnd_toEndOf="@id/fab_main"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_baseline_add_24"
+        app:borderWidth="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_btn_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_baseline_gps_fixed"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:background="@color/background_gray"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/ic_baseline_access_alarms_24"
+                android:text="시간"
+                android:textColor="@color/font_color"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:src="@drawable/ic_baseline_moving_24"
+                android:text="거리"
+                android:textColor="@color/font_color"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_rocket_launch_24"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="속도"
+                android:textColor="@color/font_color"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_local_fire_department_24"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="속도"
+                android:textColor="@color/font_color"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Chronometer
+                android:id="@+id/chronometer"
+                android:layout_weight="1"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/font_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_mapDistance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:text="0km"
+                android:textColor="@color/font_color"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tv_mapSpeed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:text="0.0km/h"
+                android:textColor="@color/font_color"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tv_mapKCal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="top"
+                android:gravity="center"
+                android:text="0.0kcal"
+                android:textColor="@color/font_color"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_map_cl_half"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <Button
+                android:id="@+id/btn_route"
+                style="@style/ButtonBorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="코스 가져오기"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/gl_map_cl_half"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_myCourseUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="주행 기록 저장"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/gl_map_cl_half"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#45D508"
+                android:text="주행 기록 시작"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/gl_map_cl_half"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+ <item
+     android:id="@+id/if_community"
+     android:enabled="true"
+     android:icon="@drawable/ic_community"
+     android:title="커뮤니티"
+     />
+
+    <item
+        android:id="@+id/if_running"
+        android:enabled="true"
+        android:icon="@drawable/ic_bike"
+        android:title="주행하기"
+        />
+
+    <item
+        android:id="@+id/if_profile"
+        android:enabled="true"
+        android:icon="@drawable/ic_profile"
+        android:title="내 프로필"
+        />
+
+</menu>

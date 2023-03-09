@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.IdSearchSuccessActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guidelineHalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.02"
+        android:paddingLeft="15dp"
+        android:text="입력된 정보로\n조회된 아이디를 확인해주세요"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guidelineHalf"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toTopOf="@+id/hg_top" />
+
+    <TextView
+        android:id="@+id/tv_findedId"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디 : dfsdf"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btn_idSearchPass"
+        android:layout_marginTop="30dp"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/skyBlue"
+        android:text="패스워드 찾기"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_findedId" />
+
+    <Button
+        android:id="@+id/btn_idSearchLogin"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/skyBlue"
+        android:text="로그인 페이지"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/btn_idSearchPass" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guidelineHalf"
+        app:srcCompat="@drawable/img_confirm_mark" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

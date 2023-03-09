@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url(./assets/fonts/woff/Pretendard-Regular.woff);
+}
+
+@font-face {
+  font-family: 'Pretendard-Medium';
+  src: url(./assets/fonts/woff/Pretendard-Medium.woff);
+}
+
+@font-face {
+  font-family: 'Pretendard-Bold';
+  src: url(./assets/fonts/woff/Pretendard-Bold.woff);
+}
+
+@font-face {
+  font-family: 'Pretendard-SemiBold';
+  src: url(./assets/fonts/woff/Pretendard-SemiBold.woff);
+}
+
+@font-face {
+  font-family: 'Happiness-Title';
+  src: url(./assets/fonts/Happiness-Sans-Title.woff);
+}

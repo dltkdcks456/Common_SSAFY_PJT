@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.RegisterActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg_registerTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <TextView
+        style="@style/HeadLineStyle"
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/register_welcome"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toTopOf="@+id/hg_top" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_registerEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/hg_registerTop">
+
+        <EditText
+            android:id="@+id/et_registerEmail"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@drawable/login_edit_text_form"
+            android:hint="이메일 입력"
+            android:textColor="@color/littleRed"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_registerCheckEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/skyBlue"
+            android:text="이메일 인증"
+            android:enabled="false"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_registerEmail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/ll_emailCheck"
+        android:background="@color/background_blue"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/cl_registerEmail">
+
+        <TextView
+            android:gravity="center"
+            android:text="이메일 인증번호를 입력해주세요"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/littleRed"
+                android:id="@+id/tv_minuteTimer"
+                android:gravity="center"
+                android:text="0:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textColor="@color/littleRed"
+                android:id="@+id/tv_secondTimer"
+                android:gravity="center"
+                android:text="00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_registerEmailCheck"
+                android:layout_marginRight="10dp"
+                android:maxLength="8"
+                android:layout_width="150dp"
+                android:layout_height="48dp"/>
+            <Button
+                android:id="@+id/btn_registerCheckEmailCode"
+                android:backgroundTint="@color/skyBlue"
+                android:textStyle="bold"
+                android:enabled="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "인증" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_registerId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/ll_emailCheck">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg_rightInputLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <EditText
+            android:id="@+id/et_registerId"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@drawable/login_edit_text_form"
+            android:hint="@string/register_id"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vg_rightInputLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_registerCheckId"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/skyBlue"
+            android:enabled="false"
+            android:text="@string/register_idCheck"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/vg_rightInputLine"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/vg_right"
+        app:layout_constraintStart_toStartOf="@id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/cl_registerId">
+
+        <TextView
+            android:id="@+id/tv_RegisterIdCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:textColor="@color/littleRed" />
+
+        <EditText
+            android:id="@+id/et_registerPass"
+            style="@style/RegisterInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_edit_text_form"
+            android:hint="비밀번호 입력"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/tv_registerPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+
+            android:textColor="@color/littleRed" />
+
+        <EditText
+            android:id="@+id/et_registerPassCheck"
+            style="@style/RegisterInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_edit_text_form"
+            android:hint="비밀번호 확인"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/tv_registerPassCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/littleRed" />
+
+        <EditText
+            android:id="@+id/et_registerNickName"
+            style="@style/RegisterInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/login_edit_text_form"
+            android:hint="닉네임"/>
+
+        <TextView
+            android:id="@+id/tv_registerNickNameCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:textColor="@color/littleRed"
+            android:layout_marginBottom="5dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_nameAndGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vg_half3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vg_half4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.62" />
+
+            <EditText
+                android:id="@+id/et_registerName"
+                style="@style/RegisterInputStyle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@drawable/login_edit_text_form"
+                android:hint="성명"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/vg_half3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/cl_nameAndGender" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="성별"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/vg_half4"
+                app:layout_constraintStart_toStartOf="@+id/vg_half3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/rg_registerGender"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/vg_half4"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/rb_registerMale"
+                    android:layout_marginLeft="10dp"
+                    android:text="남"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:id="@+id/rb_registerFemale"
+                    android:layout_marginLeft="10dp"
+                    android:text="여"
+                    android:textSize="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:textSize="20dp"
+        android:text="주소 입력"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_registerSpinner"
+        android:layout_marginTop="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_address">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg_leftSpinnerLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg_rightSpinnerLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7"/>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vg_leftSpinnerLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vg_rightSpinnerLine"
+            app:layout_constraintStart_toStartOf="@+id/vg_leftSpinnerLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/vg_rightSpinnerLine"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="회원가입"
+        style="@style/HeadLineStyle"
+        android:backgroundTint="@color/skyBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

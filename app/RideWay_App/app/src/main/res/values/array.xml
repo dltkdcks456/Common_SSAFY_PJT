@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="si">
+        <item>서울특별시</item>
+        <item>부산광역시</item>
+        <item>대구광역시</item>
+        <item>인천광역시</item>
+        <item>광주광역시</item>
+        <item>대전광역시</item>
+        <item>울산광역시</item>
+        <item>세종특별자치시</item>
+        <item>경기도</item>
+        <item>강원도</item>
+        <item>충청북도</item>
+        <item>충청남도</item>
+        <item>전라북도</item>
+        <item>전라남도</item>
+        <item>경상북도</item>
+        <item>경상남도</item>
+        <item>제주특별자치도</item>
+    </string-array>
+
+    <string-array name="seoulSi">
+        <item>종로구</item>
+        <item>중구</item>
+        <item>용산구</item>
+        <item>성동구</item>
+        <item>광진구</item>
+        <item>동대문구</item>
+        <item>중랑구</item>
+        <item>성북구</item>
+        <item>강북구</item>
+        <item>도봉구</item>
+        <item>노원구</item>
+        <item>은평구</item>
+        <item>서대문구</item>
+        <item>마포구</item>
+        <item>양천구</item>
+        <item>강서구</item>
+        <item>구로구</item>
+        <item>금천구</item>
+        <item>영등포구</item>
+        <item>동작구</item>
+        <item>관악구</item>
+        <item>서초구</item>
+        <item>강남구</item>
+        <item>송파구</item>
+        <item>강동구</item>
+    </string-array>
+
+</resources>

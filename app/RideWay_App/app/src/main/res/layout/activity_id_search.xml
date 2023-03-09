@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.IdSearchActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guidelineHalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guidelineHalf2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guidelineHalf3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guidelineHalf4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guidelineHalf5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.02"
+        android:paddingLeft="15dp"
+        android:text="라이드 웨이 가입 정보로 \n아이디를 찾을 수 있습니다."
+        android:textColor="@color/black"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guidelineHalf"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toTopOf="@+id/hg_top" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.02"
+        android:paddingLeft="10dp"
+        android:text="성명"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guidelineHalf" />
+
+    <EditText
+        android:id="@+id/et_idName"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="이름 입력"
+        android:maxLength="4"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guidelineHalf2" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:letterSpacing="-0.02"
+        android:paddingLeft="10dp"
+        android:text="이메일"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guidelineHalf3" />
+
+    <EditText
+        android:id="@+id/et_idEmail"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="회원가입시의 이메일 입력"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontal_guidelineHalf5"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left" />
+
+    <Button
+        android:id="@+id/btn_idSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/skyBlue"
+        android:layout_marginBottom="20dp"
+        android:text="아이디 찾기"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

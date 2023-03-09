@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".community.BoardFragment"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_ToolBar"
+        style="@style/MyToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg_left2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="경로 게시판"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/ib_bell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#00ff0000"
+            android:src="@drawable/ic_bell"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ib_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#00ff0000"
+            android:src="@drawable/ic_menu"
+            android:visibility="gone" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:weightSum="10">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:gravity="right"
+            >
+
+            <TextView
+                android:id="@+id/tv_board_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="추천 경로"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <View
+                android:background="#2C74B3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                >
+
+                <Spinner
+                    android:id="@+id/sp_search_options"
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="right"
+                    />
+
+                <EditText
+                    android:id="@+id/et_search_keyword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@null"
+                    android:layout_weight="9"
+                    android:hint="검색어를 입력하세요."
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@drawable/search" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:fillViewport="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/board_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+
+</LinearLayout>

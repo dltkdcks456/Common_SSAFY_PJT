@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".deal.DealActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_mainToolBar"
+        style="@style/MyToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deal_toolbar"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:textSize="20sp"/>
+
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/ib_bell"
+            android:src="@drawable/ic_bell"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#00ff0000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/ib_menu"
+            android:src="@drawable/ic_menu"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#00ff0000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tb_mainToolBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:weightSum="10"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="right"
+            app:layout_constraintTop_toBottomOf="@id/tb_mainToolBar"
+            >
+
+            <TextView
+                android:id="@+id/tv_board_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="거래 목록"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+            <View
+                android:background="#2C74B3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                >
+
+                <Spinner
+                    android:id="@+id/sp_search_options"
+                    android:visibility="gone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="right"
+                    />
+
+                <EditText
+                    android:id="@+id/et_search_keyword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@null"
+                    android:layout_weight="9"
+                    android:hint="검색어를 입력하세요."
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@drawable/search" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sorting_options"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="12sp"
+                android:text="최신순" />
+
+
+        </LinearLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8.5"
+            android:fillViewport="true"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/deal_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:gravity="right"
+            >
+
+            <Button
+                android:id="@+id/btn_insert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="등록" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

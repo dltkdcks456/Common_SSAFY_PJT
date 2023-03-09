@@ -1,0 +1,95 @@
+/* 현재 달 */
+.react-datepicker__current-month {
+  font-family: 'Pretendard-Regular';
+  padding-top: 0.5rem;
+}
+
+/* 모든 날짜 */
+.react-datepicker__day {
+  font-family: 'Pretendard-Regular';
+  font-size: 1rem;
+}
+
+.react-datepicker__day:hover {
+  border-radius: 50%;
+}
+
+.react-datepicker__day-name {
+  /* width: 2rem; */
+  margin-top: 0.5rem;
+}
+
+/* 현재 날짜 */
+.react-datepicker__day--today {
+  /* width: 28px; */
+  /* background-color: #def1ff; */
+  border-radius: 50%;
+}
+
+/* 선택된 날짜 */
+.react-datepicker__day--selected {
+  background-color: #def1ff;
+  color: black;
+  border-radius: 50%;
+}
+.react-datepicker__day--selected:hover {
+  background-color: '#def1ff';
+}
+
+/* 해당 달을 넘어선 애들 회색 처리 */
+.react-datepicker__day--outside-month {
+  color: rgb(150, 150, 150);
+}
+
+/* 다른 달 같은 날에 선택된 애들 효과 없애주는거 */
+.react-datepicker__day--keyboard-selected {
+  border-radius: 50%;
+}
+
+/* 시간 목록 헤더 글꼴 */
+.react-datepicker-time__header {
+  font-family: 'Pretendard-Regular';
+}
+
+/* 모든 시간 목록 */
+.react-datepicker__time-list-item {
+  font-family: 'Pretendard-Regular';
+  vertical-align: center;
+  font-size: 0.9rem;
+}
+
+/* 선택된 시간 */
+.react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box
+  ul.react-datepicker__time-list
+  li.react-datepicker__time-list-item--selected {
+  background-color: #def1ff;
+  color: black;
+  font-weight: 0;
+}
+.react-datepicker__day--selected:hover {
+  border-radius: 50%;
+}
+
+.gray-day {
+  color: #aba8b9;
+}
+
+.react-datepicker__input-container {
+  text-align: end;
+}
+
+.input-datepicker {
+  width: 18rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: 1px solid #a3a3a3;
+  padding-left: 1rem;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 1rem;
+  margin-right: 0;
+  font-family: 'Pretendard-Regular';
+}

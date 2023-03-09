@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.SecondRegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_register"
+        style="@style/MyToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar Title"
+            style="@style/HeadLineStyle"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:textSize="20sp"
+            />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg_registerTop1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_registerId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toTopOf="@+id/hg_registerTop1">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg_rightInputLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="259dp" />
+
+        <EditText
+            android:id="@+id/et_registerId"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@drawable/login_edit_text_form"
+            android:hint="@string/register_id"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/vg_rightInputLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_registerCheckId"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/skyBlue"
+            android:enabled="false"
+            android:text="@string/register_idCheck"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/vg_rightInputLine"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/vg_right"
+        app:layout_constraintStart_toStartOf="@id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/cl_registerId">
+
+        <TextView
+            android:id="@+id/tv_RegisterIdCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:textColor="@color/littleRed"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/et_registerPass"
+            style="@style/RegisterInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/login_edit_text_form"
+            android:hint="비밀번호 입력"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/tv_registerPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/littleRed" />
+
+        <EditText
+            android:id="@+id/et_registerPassCheck"
+            style="@style/RegisterInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_edit_text_form"
+            android:hint="비밀번호 확인"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/tv_registerPassCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/littleRed" />
+
+        <EditText
+            android:id="@+id/et_registerNickName"
+            style="@style/RegisterInputStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/login_edit_text_form"
+            android:hint="닉네임을 입력해주세요"/>
+
+        <TextView
+            android:id="@+id/tv_registerNickNameCheck"
+            android:text="닉네임은 한글로 2~14자로 입력해주세요"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:textColor="@color/littleRed"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:paddingLeft="5dp"
+            android:text="아래는 정확한 칼로리 계산을 위한 선택 입력사항입니다."
+            android:textColor="@color/font_color"/>
+
+        <EditText
+            android:id="@+id/et_registerWeight"
+            style="@style/RegisterInputStyle"
+            android:maxLength="3"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/login_edit_text_form"
+            android:hint="몸무게 (최소 30 이상 입력)"/>
+
+        <TextView
+            android:id="@+id/tv_registerWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="미입력 시 65kg으로 입력됩니다."
+            android:textColor="@color/blue"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/et_registerBikeWeight"
+            style="@style/RegisterInputStyle"
+            android:maxLength="4"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/login_edit_text_form"
+            android:hint="자전거 무게 (최소 6 이상 정수)"/>
+
+        <TextView
+            android:id="@+id/tv_registerBikeWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="미입력시 12kg으로 입력됩니다."
+            android:textColor="@color/blue"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="회원가입"
+        style="@style/HeadLineStyle"
+        android:backgroundTint="@color/skyBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

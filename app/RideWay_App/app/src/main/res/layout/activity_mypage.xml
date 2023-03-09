@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mypage.MypageActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_mainToolBar"
+        style="@style/MyToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ib_back"
+            android:src="@drawable/ic_backspace"
+            android:layout_gravity="left"
+            android:backgroundTint="#00ff0000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toolbar Title"
+            android:layout_gravity="center"
+            android:textSize="20sp"/>
+
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/ib_bell"
+            android:src="@drawable/ic_bell"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#00ff0000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/ib_menu"
+            android:src="@drawable/ic_menu"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#00ff0000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg_myProfileTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg_myProfileHalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="내 프로필 상태 : "
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/hg_myProfileTop"
+        app:layout_constraintEnd_toStartOf="@+id/tv_myProfileOpen"
+        app:layout_constraintTop_toBottomOf="@+id/tb_mainToolBar" />
+
+    <TextView
+        android:id="@+id/tv_myProfileOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="공개"
+        android:textSize="15dp"
+        android:gravity="right"
+        app:layout_constraintBottom_toTopOf="@+id/hg_myProfileTop"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintTop_toBottomOf="@+id/tb_mainToolBar" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ci_profileImage"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:src="@drawable/img_default_profile"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toTopOf="@+id/hg_myProfileTop"
+        app:civ_border_width="0.5dp"
+        app:civ_border_overlay="true"
+        app:civ_border_color="#F1F1F1"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        style="@style/MyProfileLinearLayoutBorder"
+        android:layout_width="300dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/ci_profileImage">
+
+        <TextView
+            android:id="@+id/tv_MyNickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="오늘의 타코야끼"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_MyEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="이메일 : asdasdada@sadasdd.com" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_myProfileSi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="세종특별자치시" />
+
+            <TextView
+                android:id="@+id/tv_myProfileGun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="중구" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_profileModify"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:text="프로필 수정"
+        android:textColor="#252525"
+        android:backgroundTint="#F6F6F6"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/hg_myProfileHalf"/>
+
+    <Button
+        android:id="@+id/btn_passwordModify"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:text="비밀번호 변경"
+        android:textColor="#252525"
+        android:backgroundTint="#F6F6F6"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/btn_emailModify"/>
+
+    <Button
+        android:id="@+id/btn_deleteAccount"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:text="회원탈퇴"
+        android:textColor="#252525"
+        android:backgroundTint="#F6F6F6"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/btn_passwordModify"/>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:text="로그아웃"
+        android:textColor="#252525"
+        android:backgroundTint="#F6F6F6"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/btn_deleteAccount"/>
+
+    <Button
+        android:id="@+id/btn_emailModify"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#F6F6F6"
+        android:text="이메일 수정"
+        android:textColor="#252525"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/btn_profileModify" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MypageFragment">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/ci_profile_image"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/img_default_profile"
+                    app:civ_border_width="0.5dp"
+                    app:civ_border_overlay="true"
+                    app:civ_border_color="#E8E8E8"/>
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/iv_registerProfile"-->
+<!--                    android:layout_width="90dp"-->
+<!--                    android:layout_height="90dp"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    app:srcCompat="@mipmap/ic_launcher_round" />-->
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_MyFragNickName"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="닉네임 칸 입니다."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tv_MyFragEmail"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="abcdegww@naver.com"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_profile"
+                    style="@style/ProfileModifyButton"
+                    android:text="프로필 설정"
+                    android:textColor="#5E5E5E"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_myData"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_btn_chatList"
+                    android:background="@drawable/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:backgroundTint="@color/background_gray"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="채팅"
+                        android:textSize="17dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00ff0000"
+                        android:src="@drawable/ic_keyboard_arrow_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_btn_favorite"
+                    android:background="@drawable/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:backgroundTint="@color/background_gray"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="찜 목록"
+                        android:textSize="17dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00ff0000"
+                        android:src="@drawable/ic_keyboard_arrow_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_myPost"
+                    android:background="@drawable/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:backgroundTint="@color/background_gray"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="작성한 글"
+                        android:textSize="17dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00ff0000"
+                        android:src="@drawable/ic_keyboard_arrow_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_myAchievements"
+                    android:background="@drawable/layout_border"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="4dp"
+                    android:backgroundTint="@color/background_gray"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="획득 배지"
+                        android:textSize="17dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00ff0000"
+                        android:src="@drawable/ic_keyboard_arrow_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_mySales"
+                    android:background="@drawable/layout_border"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/background_gray"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="판매 기록"
+                        android:textSize="17dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#00ff0000"
+                        android:src="@drawable/ic_keyboard_arrow_right"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

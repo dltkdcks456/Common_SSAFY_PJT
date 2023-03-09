@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".meeting.CommunityWriteActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_ToolBar"
+        style="@style/MyToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/community_toolbar"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/ib_bell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#00ff0000"
+            android:src="@drawable/ic_bell"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ib_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#00ff0000"
+            android:src="@drawable/ic_menu"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn_insert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginEnd="13dp"
+            android:text="등록"
+            android:textColor="@color/skyBlue"
+            android:textSize="16sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tb_ToolBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제목"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/login_edit_text_form"
+                android:hint="제목을 입력해주세요."
+                android:paddingLeft="20dp"
+                android:textColor="@color/littleRed"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/login_edit_text_form"
+                android:hint="날짜"
+                android:paddingLeft="20dp"
+                android:textColor="@color/littleRed"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/login_edit_text_form"
+                android:hint="시간"
+                android:paddingLeft="20dp"
+                android:textColor="@color/littleRed"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="모임 설명"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/login_edit_text_form"
+                android:hint="모임을 설명해주세요."
+                android:paddingLeft="20dp"
+                android:textColor="@color/littleRed"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="모집 인원"
+                android:textSize="18sp"
+                />
+
+            <EditText
+                android:id="@+id/max"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/login_edit_text_form"
+                android:hint=""
+                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:inputType="number"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시작 위치"
+                android:textSize="18sp"
+                />
+
+            <Spinner
+                android:id="@+id/sp_si"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+            <Spinner
+                android:id="@+id/sp_gun"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+            <Spinner
+                android:id="@+id/sp_dong"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.EntranceActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_half1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vg_half2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hg_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btn_entranceLogin"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/skyBlue"
+        android:textColor="#393939"
+        android:text="로그인"
+        android:fontFamily="@font/dohyeon_regular"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/hg_button" />
+
+    <Button
+        android:id="@+id/btn_entranceRegister"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:fontFamily="@font/dohyeon_regular"
+        android:backgroundTint="@color/skyBlue"
+        android:text="회원가입"
+        android:layout_marginTop="10dp"
+        android:textColor="#393939"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toBottomOf="@+id/btn_entranceLogin" />
+
+    <TextView
+        android:id="@+id/tv_idSearch"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/entrance_id"
+        app:layout_constraintEnd_toStartOf="@+id/vg_half1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_entranceRegister" />
+
+    <TextView
+        android:id="@+id/tv_passSearch"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/entrance_pass"
+        app:layout_constraintStart_toStartOf="@+id/vg_half2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_entranceRegister" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        app:layout_constraintEnd_toStartOf="@+id/vg_half2"
+        app:layout_constraintStart_toStartOf="@+id/vg_half1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_entranceRegister" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_rideway_icon"
+        android:textColor="#818382"
+        android:textSize="50dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/hg_button"
+        app:layout_constraintEnd_toStartOf="@+id/vg_right"
+        app:layout_constraintStart_toStartOf="@+id/vg_left"
+        app:layout_constraintTop_toTopOf="@+id/hg_top" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

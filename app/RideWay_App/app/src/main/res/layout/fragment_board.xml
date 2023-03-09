@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".community.BoardFragment"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:gravity="right"
+            >
+
+            <TextView
+                android:id="@+id/tv_board_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="게시판 이름"
+                android:fontFamily="@font/nanum_square_neo_bold"
+                android:textSize="25dp"
+                android:textStyle="bold"/>
+            <View
+                android:background="#2C74B3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                >
+
+                <Spinner
+                    android:id="@+id/sp_search_options"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="right"
+                    />
+
+                <EditText
+                    android:id="@+id/et_search_keyword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@null"
+                    android:layout_weight="6"
+                    android:hint="검색어를 입력하세요."
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_search"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@drawable/search" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sorting_options"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="12sp"
+                android:text="최신순" />
+
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:fillViewport="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/board_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            >
+
+            <Button
+                android:id="@+id/btn_write"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="글쓰기" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

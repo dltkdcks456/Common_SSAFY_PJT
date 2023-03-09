@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 툴바에 적히는 텍스트 뷰의 스타일 -->
+    <style name="HeadLineStyle">
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RegisterInputStyle">
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <!-- 날짜 스피너가 달력형태가 아니게 만드는 스타일 얘가 바로 밑에 스타일을 참조함 -->
+    <style name="MySpinnerDatePickerStyle" parent="android:Theme.Material.Dialog">
+        <item name="android:datePickerStyle">@style/MySpinnerDatePicker</item>
+    </style>
+
+    <!-- 날짜 스피너가 달력형태가 아니게 만드는 스타일 -->
+    <style name="MySpinnerDatePicker" parent="android:Widget.Material.DatePicker">
+        <item name="android:datePickerMode">spinner</item>
+    </style>
+
+    <!-- 툴바 스타일 -->
+    <style name="MyToolBar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="android:background">@drawable/custom_toolbar</item>
+    </style>
+
+    <!-- 내 프로필 설정 버튼 스타일 -->
+    <style name="ProfileModifyButton">
+        <item name="android:background">@drawable/profile_button_border</item>
+        <item name="backgroundTint">@color/background_gray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <!-- 내 프로필 설정 버튼 스타일 -->
+    <style name="RiddingButton">
+        <item name="android:background">@drawable/profile_button_border</item>
+        <item name="backgroundTint">@color/littleMint</item>
+        <item name="android:textColor">@color/font_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
+    <!-- 프로필 수정에서 보이는 리니어 레이아웃 테두리 -->
+    <style name="MyProfileLinearLayoutBorder">
+        <item name="android:background">@drawable/myprofile_linear_border</item>
+    </style>
+
+    <!-- 맵 용 버튼 -->
+    <style name="ButtonBorder">
+        <item name="background">@drawable/btn_border</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/font_color</item>
+    </style>
+
+    <!-- 맵 용 버튼 버전 2 -->
+    <style name="MapButton">
+        <item name="background">@drawable/btn_border</item>
+        <item name="backgroundTint">#03A326</item>
+        <item name="android:textColor">@color/font_color</item>
+    </style>
+
+    <!-- 전형적인 동그란 버튼 start Running 버튼 -->
+    <style name="RoundButton">
+        <item name="android:background">@drawable/round_button_border</item>
+        <item name="backgroundTint">#85D9FF</item>
+        <item name="android:textColor">@color/font_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
+</resources>

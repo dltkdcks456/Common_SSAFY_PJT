@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RunningFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_hgRunning1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_hgRunning2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.32" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_hgRunning3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vgRunning1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_vgRunning2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/gl_vgRunning1"
+            app:layout_constraintStart_toStartOf="@+id/gl_vgRunning2"
+            app:layout_constraintTop_toTopOf="@+id/gl_hgRunning1">
+
+            <TextView
+                android:id="@+id/tv_runningNickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="반가워요 !"
+                android:fontFamily="@font/jua_regular"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘도 달려보실까요?"
+                android:fontFamily="@font/jua_regular"
+                android:paddingLeft="20dp"
+                android:textColor="@color/black"
+                android:textSize="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/gl_vgRunning1"
+            app:layout_constraintStart_toStartOf="@+id/gl_vgRunning2"
+            app:layout_constraintTop_toTopOf="@+id/gl_hgRunning2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="오늘 주행 기록"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="15dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/nanum_square_neo_bold"
+                android:textStyle="bold"
+                android:textSize="25dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘 소비 칼로리 : "
+                    android:paddingLeft="30dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nanum_square_neo_bold"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:id="@+id/tv_todayKcal"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0kcal"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nanum_square_neo_bold"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘 누적 시간 : "
+                    android:paddingLeft="30dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nanum_square_neo_bold"
+                    android:textSize="20dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_todayTime"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00:00"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nanum_square_neo_bold"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘 누적 거리 : "
+                    android:paddingLeft="30dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nanum_square_neo_bold"
+                    android:textSize="20dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_todayDist"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0m"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/nanum_square_neo_bold"
+                    android:textSize="20dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_running"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            style="@style/RoundButton"
+            android:text="Start Bike Riding!"
+            android:textStyle="bold"
+            android:fontFamily="@font/jua_regular"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/gl_vgRunning1"
+            app:layout_constraintStart_toStartOf="@+id/gl_vgRunning2"
+            app:layout_constraintTop_toTopOf="@+id/gl_hgRunning3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+</FrameLayout>

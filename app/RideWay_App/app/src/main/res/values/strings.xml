@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">RideWay_App</string>
+    <string name="login_welcome">RideWay 로그인</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- 입장 화면용 String -->
+    <string name="entrance_id"><u>아이디 찾기</u></string>
+    <string name="entrance_pass"><u>패스워드 찾기</u></string>
+
+    <!-- 회원가입 화면용 String -->
+    <string name="register_welcome">RideWay 회원가입</string>
+    <string name="register_id">아이디 입력</string>
+    <string name="register_idCheck">중복확인</string>
+    <string name="register_pass">패스워드 입력</string>
+    <string name="register_passCheck">패스워드 확인</string>
+
+    <string name="board_comment">댓글</string>
+    <string name="title_activity_deal">DealActivity</string>
+
+
+    <string name="deal_toolbar">중고거래</string>
+    <string name="community_toolbar">만남의 광장</string>
+
+</resources>

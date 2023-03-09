@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommunityFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:text="이번 주 주목할 사람!"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_weekly_user"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:text="만남의 광장!"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/community_recycler_view"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"
+                android:text="최근 게시물"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/board_recycler_view"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:fillViewport="true">-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recycler_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content" />-->
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+</FrameLayout>

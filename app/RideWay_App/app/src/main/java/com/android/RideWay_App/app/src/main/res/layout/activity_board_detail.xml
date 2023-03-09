@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".community.BoardDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_ToolBar"
+        style="@style/MyToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg_left2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vg_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="커뮤니티"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/ib_bell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#00ff0000"
+            android:src="@drawable/ic_bell"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ib_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="#00ff0000"
+            android:src="@drawable/ic_menu"
+            android:visibility="gone" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:weightSum="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_ToolBar"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:layout_weight="8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/board"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="게시판 종류"
+                    android:textSize="25sp"
+
+                    />
+                <View
+                    android:background="#ececec"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2dp"
+                    />
+
+                <TextView
+                    android:id="@+id/board_detail_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:textSize="25sp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="75dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/ci_profileImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/img_default_profile"
+                            app:layout_constraintEnd_toStartOf="@+id/vg_right"
+                            app:layout_constraintStart_toStartOf="@+id/vg_left"
+                            app:layout_constraintTop_toTopOf="@+id/hg_myProfileTop"
+                            app:civ_border_width="0.5dp"
+                            app:civ_border_overlay="true"
+                            app:civ_border_color="#F1F1F1"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="75dp"
+                        android:layout_weight="6"
+                        android:orientation="vertical"
+                        android:gravity="left|center"
+                        >
+
+
+                        <TextView
+                            android:id="@+id/user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="이름"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/write_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="작성일"
+                            android:textSize="18sp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="75dp"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical"
+                        >
+
+                        <TextView
+                            android:id="@+id/visited"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="조회수 : " />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/board_detail_content"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    />-->
+
+                <org.sufficientlysecure.htmltextview.HtmlTextView
+                    android:id="@+id/board_detail_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:weightSum="5"
+            >
+            <View
+                android:background="#ececec"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                />
+
+            <LinearLayout
+                android:id="@+id/btn_same_user"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                android:gravity="right">
+
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="수정" />
+
+                <Button
+                    android:id="@+id/btn_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="삭제" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/go_comment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/board_comment"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/comment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="(0)"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

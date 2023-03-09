@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".mainapp.MainApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RideWay_App"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".map.CourseDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".map.CourseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".map.CourseCommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".meeting.MeetingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".meeting.CommunityDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".meeting.CommunityWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".meeting.CommunityUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chat.CreateChatRoomTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chat.ChatListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chat.Chat2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".chat.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".deal.DealUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".deal.DealWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".deal.DealDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".deal.DealActivity"
+            android:exported="false" />
+        <activity
+            android:name=".map.CourseFileSaveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mypage.MySalesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mypage.MyAchievementsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mypage.MyPostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mypage.MyFavoriteActivity"
+            android:exported="false" />
+
+        <service android:name=".service.TestService" />
+
+        <activity
+            android:name=".TestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Mypage.EmailModifyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mypage.DeleteSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mypage.DeleteAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mypage.PasswordModifyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mypage.ProfileModifyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Mypage.MypageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".community.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".community.BoardWriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".community.BoardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".community.BoardCommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".community.BoardDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".community.BoardUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".map.MapActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="" />
+
+        <activity
+            android:name=".login.PassSearchSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.IdSearchSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.IdSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.FirstRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.SecondRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.PassSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.EntranceActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginSuccessActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

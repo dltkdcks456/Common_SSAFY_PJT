@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug" monitorInterval="5">
+    <Properties>
+        <Property name="logFileName">log</Property>
+        <Property name="consoleLayout">[%d{yyyy-MM-dd HH:mm:ss}] [%-5p] [%c{1}:%L] - %m%n</Property>
+        <Property name="fileLayout">%d [%t] %-5level %c(%M:%L) - %m%n</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${consoleLayout}" />
+        </Console>
+        <RollingFile name="file"
+                     fileName="logs/${logFileName}.log"
+                     filePattern="logs/${logFileName}.%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="${fileLayout}" />
+            <Policies>
+                <SizeBasedTriggeringPolicy size="20 MB"/>
+                <TimeBasedTriggeringPolicy interval="1" /> <!-- 파일패턴의 날짜 포매시 초단위로 설정되어 있을 경우 1초에 한번씩 trigger -->
+            </Policies>
+            <DefaultRolloverStrategy max="5" fileIndex="max" >
+                <Delete basePath="/logs" maxDepth="3">
+                    <IfLastModified age="10d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+    </Appenders>
+
+    <!--TRACE > DEBUG > INFO > WARN > ERROR > FATAL -->
+    <Loggers>
+        <logger name="com.example.demo" level="DEBUG" additivity="false" >
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </logger>
+
+        <logger name="org.springframework" level="DEBUG" additivity="false" >
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </logger>
+
+        <!-- sql binding variables logging -->
+        <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </logger>
+
+        <!-- sql logging -->
+        <logger name="org.hibernate.SQL" level="DEBUG" additivity="false" >
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </logger>
+
+        <!-- ROOT logger-->
+        <Root level="ERROR">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="file" />
+        </Root>
+    </Loggers>
+</Configuration>
