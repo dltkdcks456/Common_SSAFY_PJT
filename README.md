@@ -6,44 +6,45 @@
 
 # 서비스
 
+## 0. 메인 페이지
+
+
+
+
+![image-20230309140831494](assets/image-20230309140831494.png)
 
 ## 1. 커뮤니티 기능
 
 
-![RideWay_-_Chrome_2023-02-16_13-41-28](/uploads/695325e80b0ea919ca14ccd04e7d62f8/RideWay_-_Chrome_2023-02-16_13-41-28.gif)
+![image-20230309140629282](assets/image-20230309140629282.png)
 
 
 ## 2. 중고 거래 기능
 
-
-![RideWay_-_Chrome_2023-02-17_11-17-28](/uploads/add024b9b616f64334920d863675ff8f/RideWay_-_Chrome_2023-02-17_11-17-28.gif)
+<img src="assets/image-20230309140640142.png" alt="image-20230309140640142" />
 
 
 ## 3. 모임 기능
 
 
-![RideWay_-_Chrome_2023-02-17_09-17-02](/uploads/f883ebff420d8d86e992cb7c04a3dab1/RideWay_-_Chrome_2023-02-17_09-17-02.gif)
+![image-20230309140722993](assets/image-20230309140722993.png)
 
 
 ## 4. 지도 기능
 
 
-![RideWay_-_Chrome_2023-02-16_13-55-06](/uploads/d16f2c7f35d420596e431669ddaecaa2/RideWay_-_Chrome_2023-02-16_13-55-06.gif)
+![image-20230309140735532](assets/image-20230309140735532.png)
 
 
 ## 5. 앱 기능
 
 
 #### 메인화면
-![rn_image_picker_lib_temp_9d40dfc3-1ca3-4b6f-9d9f-2f37fd95f7bf](/uploads/d3ed70127a7aebc30ea97c5cb3bc8e23/rn_image_picker_lib_temp_9d40dfc3-1ca3-4b6f-9d9f-2f37fd95f7bf.gif)
-
-
-#### 채팅
-![Image_Pasted_at_2023-2-16_15-26](/uploads/71d265be34cf52d6b5fcf85593306da9/Image_Pasted_at_2023-2-16_15-26.gif)
+![image-20230309140749025](assets/image-20230309140749025.png)
 
 
 #### 지도 및 경로
-![rn_image_picker_lib_temp_c9c8d654-dfbe-4e90-a0db-67b3ece3375e](/uploads/248bacc4582ab0e99fb7ffebbea1f237/rn_image_picker_lib_temp_c9c8d654-dfbe-4e90-a0db-67b3ece3375e.gif)
+![image-20230309140808344](assets/image-20230309140808344.png)
 
 
 ### 서비스 전체 기능
@@ -70,36 +71,14 @@
 
 
 ## 🛠️ 기술 스택
-<img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
-<img src="https://img.shields.io/badge/jwt-000000?style=for-the-badge&logo=jason%20web%20tokens&logoColor=white">
-<img src="https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white">
-<img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
-<img src="https://img.shields.io/badge/gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white">
-<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
-
-
-<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
-<img src="https://img.shields.io/badge/redux-764ABC?style=for-the-badge&logo=redux&logoColor=white">
-<img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=node.js&logoColor=white">
-<img src="https://img.shields.io/badge/webRTC-333333?style=for-the-badge&logo=webRTC&logoColor=white">
-<img src="https://img.shields.io/badge/socket.io-010101?style=for-the-badge&logo=socket.io&logoColor=white">
-
-
-<img src="https://img.shields.io/badge/android-3DDC84?style=for-the-badge&logo=android&logoColor=white">
-<img src="https://img.shields.io/badge/kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white">
-
-
-<img src="https://img.shields.io/badge/amazonaws-232F3E?style=for-the-badge&logo=amazon%20aws&logoColor=white">
-<img src="https://img.shields.io/badge/jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white">
-<img src="https://img.shields.io/badge/jirasoftware-0052CC?style=for-the-badge&logo=jira%20software&logoColor=white">
-<img src="https://img.shields.io/badge/gitlab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white">
+![image-20230309140422297](assets/image-20230309140422297.png)
 
 
 
 
 ## 🖥 시스템 아키텍처
 
-![rideway](/uploads/3068ed0f41324c7ca580a98606e3279c/rideway.png)
+![image-20230309140442618](assets/image-20230309140442618.png)
 
 
 ## 🗂️ 디렉토리 구조
@@ -258,31 +237,7 @@
 ```
 
 ## 💾 ERD 다이어그램
-![ERD](/uploads/a445c70645309ab6e47a9ad79b11c1e1/ERD.png)
-
-
-## 🧾 요구사항 명세서
-![10](/uploads/77687cd55f9666d161c24fc120e1590a/10.png)
-
-![11](/uploads/8b2acd06e1b2686db8dee9d9fcfe58cf/11.png)
-
-
-## 📋 API 연동 명세서
-![1](/uploads/36be114cfa8cedb232131bc1cfa0e38f/1.png)
-
-![2](/uploads/ee693244105f01dd3d2408597b312450/2.png)
-
-![3](/uploads/6cbd163c50b8c69529c0dfc658881c67/3.png)
-
-![4](/uploads/03711a5ffba6eab769e1d8980ff1d76b/4.png)
-
-![5](/uploads/5963b8c7efc348476f4223beafc607cb/5.png)
-
-![6](/uploads/f320cfdaf1991f92f114914d69a426e5/6.png)
-
-![7](/uploads/a47de2a3c88456398369f8c3d1bb4f82/7.png)
-
-![8](/uploads/8c9e754252fda11d30381cd27802e6ee/8.png)
+![ERD](assets/ERD.png)
 
 
 ---
